@@ -25,9 +25,12 @@ def part_2(inputs):
         if i < 3:
             previous += number
             continue
+
         current = inputs[i] + inputs[i-1] + inputs[i-2]
+
         if current > previous:
             count += 1
+
         previous = current
     return count
 
